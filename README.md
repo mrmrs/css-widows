@@ -24,21 +24,21 @@ or download the css on github and include in your project.
 .widow3 { widows: 3; }
 .widowi { widows: inherit; }
 
-@include break(not-small) {
+@media screen and (min-width: 48em) {
   .widow0-ns { widows: 0; }
   .widow2-ns { widows: 2; }
   .widow3-ns { widows: 3; }
   .widowi-ns { widows: inherit; }
 }
 
-@include break(medium) {
+@media screen and (min-width: 48em) and (max-width: 64em) {
   .widow0-m { widows: 0; }
   .widow2-m { widows: 2; }
   .widow3-m { widows: 3; }
   .widowi-m { widows: inherit; }
 }
 
-@include break(large) {
+@media screen and (min-width: 64em)  {
   .widow0-l { widows: 0; }
   .widow2-l { widows: 2; }
   .widow3-l { widows: 3; }
