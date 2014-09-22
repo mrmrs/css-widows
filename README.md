@@ -20,7 +20,8 @@ View on [npm](https://www.npmjs.org/package/css-widows)
 ## File Size
 
 607B widows.css
-458B widows.min.css
+458B widows.min.css 
+164B minified and gzipped
 
 ## The Code
 ```
