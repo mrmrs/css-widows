@@ -1,15 +1,26 @@
+/*
+   WIDOWS
+*/
+.widow0 { widows: 0; }
+.widow2 { widows: 2; }
+.widow3 { widows: 3; }
+.widowi { widows: inherit; }
+@media screen and (min-width: 48em) {
+ .widow0-ns { widows: 0; }
+ .widow2-ns { widows: 2; }
+ .widow3-ns { widows: 3; }
+ .widowi-ns { widows: inherit; }
+}
+@media screen and (min-width:48em) and (max-width: 64em) {
+ .widow0-m { widows: 0; }
+ .widow2-m { widows: 2; }
+ .widow3-m { widows: 3; }
+ .widowi-m { widows: inherit; }
+}
+@media screen and (min-width: 64em) {
+ .widow0-l { widows: 0; }
+ .widow2-l { widows: 2; }
+ .widow3-l { widows: 3; }
+ .widowi-l { widows: inherit; }
+}
 
-  Postprocess tachyons stylesheets
-
-  Usage
-    $ tachyons <input.css>
-
-  Options
-    -m, --minify Minify the output stylesheet
-    --generate-docs Generate documentation for a given module
-    --package The path to the module package to be documented
-
-  Example
-    $ tachyons src/tachyons.css > dist/c.css
-    $ tachyons src/tachyons.css > dist/c.css --minify
-    $ tachyons src/tachyons-type-scale.css --generate-docs --package=./package.json > readme.md
