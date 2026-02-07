@@ -9,10 +9,10 @@
 .widowi { widows: inherit; }
 
 @media screen and (min-width: 48em) {
-  .widow0-ns { widows: 0; }
-  .widow2-ns { widows: 2; }
-  .widow3-ns { widows: 3; }
-  .widowi-ns { widows: inherit; }
+  .widow0-s { widows: 0; }
+  .widow2-s { widows: 2; }
+  .widow3-s { widows: 3; }
+  .widowi-s { widows: inherit; }
 }
 
 @media screen and (min-width:48em) and (max-width: 64em) {
