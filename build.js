@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { transform } = require('lightningcss');
 
-const srcFile = path.join(__dirname, 'src', 'css-widows.css');
+const srcFile = path.join(__dirname, 'src', 'widows.css');
 const distDir = path.join(__dirname, 'dist');
 
 // Read source
@@ -15,22 +15,22 @@ if (!fs.existsSync(distDir)) {
 
 // Unminified — just normalize formatting
 const { code: unminified } = transform({
-  filename: 'css-widows.css',
+  filename: 'widows.css',
   code: Buffer.from(source),
   minify: false,
 });
 
-fs.writeFileSync(path.join(distDir, 'css-widows.css'), unminified);
+fs.writeFileSync(path.join(distDir, 'widows.css'), unminified);
 
 // Minified
 const { code: minified } = transform({
-  filename: 'css-widows.css',
+  filename: 'widows.css',
   code: Buffer.from(source),
   minify: true,
 });
 
-fs.writeFileSync(path.join(distDir, 'css-widows.min.css'), minified);
+fs.writeFileSync(path.join(distDir, 'widows.min.css'), minified);
 
 console.log('Build complete:');
-console.log(`  dist/css-widows.css     ${unminified.length} bytes`);
-console.log(`  dist/css-widows.min.css ${minified.length} bytes`);
+console.log(`  dist/widows.css     ${unminified.length} bytes`);
+console.log(`  dist/widows.min.css ${minified.length} bytes`);
