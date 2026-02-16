@@ -1,101 +1,100 @@
-# css-widows 0.0.6
+# css-widows
 
-Css module of single purpose classes for widows
+Functional CSS for widows
 
-#### Stats
+## Filesize
 
-186 | 16 | 16
----|---|---
-bytes | selectors | declarations
+| File | Size |
+|------|------|
+| `dist/widows.css` | 1413 bytes |
+| `dist/widows.min.css` | 967 bytes (221 Gzipped) |
 
-## Installation
+## Install
 
-#### With [npm](https://npmjs.com)
-
-```
-npm install --save-dev css-widows
-```
-
-#### With Git
-
-```
-git clone https://github.com/tachyons-css/css-widows
+```sh
+npm install css-widows
 ```
 
 ## Usage
 
-#### Using with [PostCSS](https://github.com/postcss/postcss)
-
-Import the css module
+### Import
 
 ```css
 @import "css-widows";
 ```
 
-Then process the CSS using the [`tachyons-cli`](https://github.com/tachyons-css/tachyons-cli)
-
-```sh
-$ npm i -g tachyons-cli
-$ tachyons-cli path/to/css-file.css > dist/t.css
-```
-
-#### Using the CSS
-
-The built CSS is located in the `css` directory. It contains an unminified and minified version.
-You can either cut and paste that css or link to it directly in your html.
+### CDN
 
 ```html
-<link rel="stylesheet" href="path/to/module/css/css-widows">
+<link rel="stylesheet" href="https://unpkg.com/css-widows/dist/widows.min.css">
 ```
 
-#### Development
+### Direct
 
-The source CSS files can be found in the `src` directory.
-Running `$ npm start` will process the source CSS and place the built CSS in the `css` directory.
-
-## The CSS
-
-```css
-/*
-   WIDOWS
-*/
-.widow0 { widows: 0; }
-.widow2 { widows: 2; }
-.widow3 { widows: 3; }
-.widowi { widows: inherit; }
-@media screen and (min-width: 48em) {
- .widow0-ns { widows: 0; }
- .widow2-ns { widows: 2; }
- .widow3-ns { widows: 3; }
- .widowi-ns { widows: inherit; }
-}
-@media screen and (min-width:48em) and (max-width: 64em) {
- .widow0-m { widows: 0; }
- .widow2-m { widows: 2; }
- .widow3-m { widows: 3; }
- .widowi-m { widows: inherit; }
-}
-@media screen and (min-width: 64em) {
- .widow0-l { widows: 0; }
- .widow2-l { widows: 2; }
- .widow3-l { widows: 3; }
- .widowi-l { widows: inherit; }
-}
+```html
+<link rel="stylesheet" href="path/to/css-widows/dist/widows.min.css">
 ```
 
-## Contributing
+## Classes
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+| Class   | Value                    |
+|---------|--------------------------|
+| `.widow1` | `widows: 2;` |
+| `.widow2` | `widows: 3;` |
+| `.widow3` | `widows: 4;` |
+| `.widow-inherit` | `widows: inherit;` |
+| `.widow-initial` | `widows: initial;` |
+| `.widow-revert` | `widows: revert;` |
+| `.widow-revert-layer` | `widows: revert-layer;` |
+| `.widow-unset` | `widows: unset;` |
+| `.widow1-s` | `widows: 2;` |
+| `.widow2-s` | `widows: 3;` |
+| `.widow3-s` | `widows: 4;` |
+| `.widow-inherit-s` | `widows: inherit;` |
+| `.widow-initial-s` | `widows: initial;` |
+| `.widow-revert-s` | `widows: revert;` |
+| `.widow-revert-layer-s` | `widows: revert-layer;` |
+| `.widow-unset-s` | `widows: unset;` |
+| `.widow1-m` | `widows: 2;` |
+| `.widow2-m` | `widows: 3;` |
+| `.widow3-m` | `widows: 4;` |
+| `.widow-inherit-m` | `widows: inherit;` |
+| `.widow-initial-m` | `widows: initial;` |
+| `.widow-revert-m` | `widows: revert;` |
+| `.widow-revert-layer-m` | `widows: revert-layer;` |
+| `.widow-unset-m` | `widows: unset;` |
+| `.widow1-l` | `widows: 2;` |
+| `.widow2-l` | `widows: 3;` |
+| `.widow3-l` | `widows: 4;` |
+| `.widow-inherit-l` | `widows: inherit;` |
+| `.widow-initial-l` | `widows: initial;` |
+| `.widow-revert-l` | `widows: revert;` |
+| `.widow-revert-layer-l` | `widows: revert-layer;` |
+| `.widow-unset-l` | `widows: unset;` |
 
-## Authors
+### Responsive
 
-* [mrmrs](http://mrmrs.io)
-* [johno](http://johnotander.com)
+Responsive variants are available for each class with the following suffixes:
+
+| Suffix | Media Query              |
+|--------|--------------------------|
+| `-s`   | `min-width: 32em`        |
+| `-m`   | `min-width: 48em`        |
+| `-l`   | `min-width: 96em`        |
+
+Example: `.widow1-m` applies the property at the medium breakpoint and above.
+
+## Building
+
+```sh
+npm run build
+```
+
+Processes `src/widows.css` with [Lightning CSS](https://lightningcss.dev) and outputs to `dist/`.
+
+- `dist/widows.css` — formatted
+- `dist/widows.min.css` — minified
 
 ## License
 
-ISC
+MIT
